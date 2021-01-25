@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
 $nav-height: 80px;
-$img-width: 300px;
+$img-width: 250px;
 
 .main {
   padding-top: $nav-height;
@@ -80,39 +80,77 @@ nav {
 
 // SHOP
 
-.cart {
+.cart-link {
   width: 200px;
   height: $nav-height - 10px;
   position: fixed;
   top: 5px;
   right: 5px;
+  border-radius: 5px;
   background-color: #ddd;
 }
 .products {
-  padding-top: 100px;
+  margin: 0;
+  padding-top: 60px;
   padding-left: 200px;
   li {
-    width: 650px;
-    margin-bottom: 80px;
+    width: 600px;
+    margin-bottom: 20px;
+    padding: 10px;
     display: grid;
     grid-template-columns: $img-width 1fr;
-    grid-gap: 50px;
+    grid-gap: 10px;
     list-style: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     img {
       width: $img-width;
       border-radius: 5px;
     }
-    h2 {
-      font-variant: small-caps;
-    }
-    p {
-      padding-left: .5em;
-    }
-    .type {
-      font-style: italic;
-    }
-    .price {
-      font-weight: 700;
+    .product-specs {
+      padding-left: 25px;
+      display: grid;
+      align-content: space-between;
+      border-left: 1px solid #ccc;
     }
   }
 }
+.info {
+  h2 {
+    font-variant: small-caps;
+  }
+  p {
+    padding-left: .5em;
+  }
+  .type {
+    font-style: italic;
+  }
+  .price {
+    font-weight: 700;
+  }
+}
+.purchase {
+  .quantity {
+    width: 90px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  .add {
+    width: 90px;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background-color: #ccc;
+  }
+  .add:hover {
+    cursor: pointer;
+    background-color: #bbb;
+  }
+}
+// * {
+//   border: 1px solid red;
+// }

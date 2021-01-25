@@ -19,10 +19,25 @@ function Shop() {
     return (
       <li key={index}>
         <img src={product.src}/>
-        <div className='product-info'>
-          <h2>{product.name}</h2>
-          <p className='type'>{product.type}</p>
-          <p className='price'>$ {product.price}</p>
+        <div className='product-specs'>
+          <div className='info'>
+            <h2>{product.name}</h2>
+            <p className='type'>{product.type}</p>
+            <p className='price'>$ {product.price}</p>
+          </div>
+          <div className='purchase'>
+            <form>
+              <input 
+                type='number'
+                className='quantity'
+                name='quantity' />
+              <br/>
+              <input
+                type='submit'
+                className='add'
+                value='Add to Cart'/>
+            </form>
+          </div>
         </div>
       </li>
     )
@@ -30,7 +45,7 @@ function Shop() {
 
   return (
     <section className='shop'>
-      <div className='cart'>
+      <div className='cart-link'>
         Cart
       </div>
       <ul className='products'>
