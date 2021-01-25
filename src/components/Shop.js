@@ -1,3 +1,6 @@
+import Cart from './Cart';
+import { useState } from 'react';
+
 import billy from '../img/billy.webp';
 import ektorp from '../img/ektorp.webp';
 import fargrik from '../img/fargrik.webp';
@@ -15,9 +18,26 @@ function Shop() {
     { src: lack, name: 'Lack', type: 'Side Table', price: 8000 }
   ];
 
+  const [quantities, setQuantities] = useState(Array(products.length).fill(0));
+
+  const toggleCart = () => {
+    document.querySelector('.cart').classList.toggle('hide');
+  }
+
+  const addProduct = (e) => {
+    e.preventDefault();
+    const index = Number(e.target.closest('li').className.split('_')[1]);
+    const newQuantity = Number(e.target.firstChild.value);
+    const before = quantities.slice(0, index);
+    const after = quantities.slice(index + 1);
+    setQuantities([...before, newQuantity, ...after]);
+  }
+
   const listItems = products.map((product, index) => {
     return (
-      <li key={index}>
+      <li 
+        key={index}
+        className={`item_${index}`}>
         <img src={product.src}/>
         <div className='product-specs'>
           <div className='info'>
@@ -26,7 +46,7 @@ function Shop() {
             <p className='price'>$ {product.price}</p>
           </div>
           <div className='purchase'>
-            <form>
+            <form onSubmit={addProduct}>
               <input 
                 type='number'
                 className='quantity'
@@ -35,7 +55,7 @@ function Shop() {
               <input
                 type='submit'
                 className='add'
-                value='Add to Cart'/>
+                value='Add to Cart' />
             </form>
           </div>
         </div>
@@ -45,12 +65,17 @@ function Shop() {
 
   return (
     <section className='shop'>
-      <div className='cart-link'>
-        Cart
+      <div 
+        className='cart-link'
+        onClick={toggleCart}>
+        Cart {quantities.reduce((sum, i) => i + sum)}
       </div>
       <ul className='products'>
         {listItems}
       </ul>
+      <Cart 
+        quantities={quantities}
+        products={products} />
     </section>
   );
 }

@@ -6,6 +6,9 @@ $img-width: 250px;
 .main {
   padding-top: $nav-height;
 }
+.hide {
+  display: none;
+}
 
 // NAVIGATION
 
@@ -89,6 +92,9 @@ nav {
   border-radius: 5px;
   background-color: #ddd;
 }
+.cart-link:hover {
+  cursor: pointer;
+}
 .products {
   margin: 0;
   padding-top: 60px;
@@ -133,6 +139,7 @@ nav {
   .quantity {
     width: 90px;
     margin-bottom: 12px;
+    padding-left: 10px;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
   }
@@ -150,6 +157,17 @@ nav {
     cursor: pointer;
     background-color: #bbb;
   }
+}
+
+// CART
+
+.cart {
+  position: fixed;
+  top: $nav-height;
+  right: 0;
+  height: 300px;
+  width: 300px;
+  background-color: orange;
 }
 // * {
 //   border: 1px solid red;
