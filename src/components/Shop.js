@@ -1,5 +1,6 @@
 import Cart from './Cart';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import billy from '../img/billy.webp';
 import ektorp from '../img/ektorp.webp';
@@ -22,6 +23,7 @@ function Shop() {
 
   const toggleCart = () => {
     document.querySelector('.cart').classList.toggle('hide');
+    document.querySelector('.cart-link').classList.toggle('change-background');
   }
 
   const addProduct = (e) => {
@@ -68,7 +70,9 @@ function Shop() {
       <div 
         className='cart-link'
         onClick={toggleCart}>
-        Cart {quantities.reduce((sum, i) => i + sum)}
+        <FontAwesomeIcon
+          icon='shopping-cart' />
+        <span>({quantities.reduce((sum, i) => i + sum)})</span> 
       </div>
       <ul className='products'>
         {listItems}

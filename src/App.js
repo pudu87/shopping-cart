@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import Shop from './components/Shop';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faShoppingCart);
 
 function App() {
   return (

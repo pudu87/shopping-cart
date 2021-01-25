@@ -9,6 +9,12 @@ $img-width: 250px;
 .hide {
   display: none;
 }
+.change-background {
+  background-color: rgb(3, 82, 3) !important;
+}
+li {
+  list-style: none;
+}
 
 // NAVIGATION
 
@@ -20,20 +26,21 @@ nav {
   right: 0;
   display: flex;
   background-color: rgb(2, 49, 2);
-  div {
+  a {
     width: 200px;
     height: 100%;
+    margin: 0 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  a {
-    text-align: center;
     text-decoration: none;
     color: #fff;
+    border: 1px solid rgb(3, 82, 3);
+    border-radius: 10px;
   }
   .active {
     text-decoration: underline;
+    background-color: rgb(3, 82, 3);
   }
 }
 
@@ -84,13 +91,24 @@ nav {
 // SHOP
 
 .cart-link {
-  width: 200px;
+  width: 100px;
   height: $nav-height - 10px;
   position: fixed;
   top: 5px;
   right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
   border-radius: 5px;
-  background-color: #ddd;
+  border: 1px solid rgb(3, 82, 3);
+  background-color: rgb(2, 49, 2);
+  span {
+    margin-left: 8px;
+    font-size: 15px;
+  }
 }
 .cart-link:hover {
   cursor: pointer;
