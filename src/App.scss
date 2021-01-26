@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Josefin+Sans:wght@100;400;700&display=swap');
 
 $nav-height: 80px;
 $img-width: 250px;
@@ -14,6 +15,20 @@ $img-width: 250px;
 }
 li {
   list-style: none;
+}
+%button {
+  width: 90px;
+  padding-top: .4em;
+  padding-bottom: .4em;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  background-color: #ccc;
+}
+%button-hover {
+  cursor: pointer;
+  background-color: #bbb;
 }
 
 // NAVIGATION
@@ -113,7 +128,7 @@ nav {
 .cart-link:hover {
   cursor: pointer;
 }
-.products {
+.items {
   margin: 0;
   padding-top: 60px;
   padding-left: 200px;
@@ -131,7 +146,7 @@ nav {
       width: $img-width;
       border-radius: 5px;
     }
-    .product-specs {
+    .item-specs {
       padding-left: 25px;
       display: grid;
       align-content: space-between;
@@ -162,18 +177,10 @@ nav {
     font-family: 'Josefin Sans', sans-serif;
   }
   .add {
-    width: 90px;
-    padding-top: .4em;
-    padding-bottom: .4em;
-    font-weight: bold;
-    font-family: 'Josefin Sans', sans-serif;
-    border: 1px solid #bbb;
-    border-radius: 3px;
-    background-color: #ccc;
+    @extend %button;
   }
   .add:hover {
-    cursor: pointer;
-    background-color: #bbb;
+    @extend %button-hover;
   }
 }
 
@@ -181,9 +188,41 @@ nav {
 
 .cart {
   position: fixed;
+  z-index: 10;
   top: $nav-height;
   right: 0;
-  height: 300px;
   width: 300px;
-  background-color: orange;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #fff;
+  button {
+    @extend %button;
+  }
+  button:hover {
+    @extend %button-hover;
+  }
+  table {
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th {
+    padding-top: .4em;
+    padding-bottom: .4em;
+    text-align: right;
+    font-size: 16px;
+    font-family: 'Cutive Mono', monospace;
+  }
+  th:first-child {
+    text-align: left;
+    width: 30%;
+  }
+  tr:last-child {
+    width: 60%;
+    th{
+      padding-top: .8em;
+      border-top: 1px solid #aaa;
+    }
+  }
 }
