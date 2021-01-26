@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.d4137e93.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.e274509f.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.e274509f.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.b56c1ee8.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.b56c1ee8.js.map",
+    "static/js/2.48e72b69.chunk.js": "/shopping-cart/static/js/2.48e72b69.chunk.js",
+    "static/js/2.48e72b69.chunk.js.map": "/shopping-cart/static/js/2.48e72b69.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.d4137e93.chunk.css.map": "/shopping-cart/static/css/main.d4137e93.chunk.css.map",
+    "static/js/2.48e72b69.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.48e72b69.chunk.js.LICENSE.txt",
+    "static/media/billy.f081373e.webp": "/shopping-cart/static/media/billy.f081373e.webp",
+    "static/media/daim-cake.cdc51c10.jpeg": "/shopping-cart/static/media/daim-cake.cdc51c10.jpeg",
+    "static/media/ektorp.9b3ce251.webp": "/shopping-cart/static/media/ektorp.9b3ce251.webp",
+    "static/media/fargrik.cbc51188.webp": "/shopping-cart/static/media/fargrik.cbc51188.webp",
+    "static/media/ice-cream.708ab6d2.jpeg": "/shopping-cart/static/media/ice-cream.708ab6d2.jpeg",
+    "static/media/kallax.4be331ae.webp": "/shopping-cart/static/media/kallax.4be331ae.webp",
+    "static/media/klippan.6b762056.webp": "/shopping-cart/static/media/klippan.6b762056.webp",
+    "static/media/lack.052028e6.webp": "/shopping-cart/static/media/lack.052028e6.webp",
+    "static/media/meatballs.a7e058a4.jpeg": "/shopping-cart/static/media/meatballs.a7e058a4.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b56c1ee8.js",
+    "static/js/2.48e72b69.chunk.js",
+    "static/css/main.d4137e93.chunk.css",
+    "static/js/main.e274509f.chunk.js"
+  ]
+}
