@@ -52,7 +52,9 @@ function Shop() {
               <input 
                 type='number'
                 className='quantity'
-                name='quantity' />
+                name='quantity'
+                min='0'
+                max='100' />
               <br/>
               <input
                 type='submit'
